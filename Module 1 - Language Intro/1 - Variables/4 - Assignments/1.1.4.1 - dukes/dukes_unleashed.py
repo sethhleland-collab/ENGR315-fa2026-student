@@ -14,6 +14,9 @@ Note: this problem does not require the "compounding interest" formula from the 
 
 ### Your code here ###
 
-in_state_gift = 0
+in_state_gift = 30792/.05
 
-out_state_gift = 0
+out_state_gift = 47882/.05
+
+print(f"In state: ${in_state_gift:.2f}")
+print(f"Out of state: ${out_state_gift:.2f}")
