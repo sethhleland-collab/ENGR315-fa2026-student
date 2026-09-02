@@ -13,10 +13,15 @@ Note: this problem does not require the "compounding interest" formula from the 
 """
 
 ### Your code here ###
+import math
 
-in_state_gift = 30792/.05
+#cost of tuition for 2022-2023
+in_state_cost = 30792
+out_of_state_cost = 47882
 
-out_state_gift = 47882/.05
+#How much alumni would have to pay to cover one full year of tuition
+in_state_gift = in_state_cost /.05
+out_state_gift = out_of_state_cost /.05
 
 print(f"In state: ${in_state_gift:.2f}")
 print(f"Out of state: ${out_state_gift:.2f}")

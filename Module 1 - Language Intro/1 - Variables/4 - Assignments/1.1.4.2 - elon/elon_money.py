@@ -13,10 +13,14 @@ Note that Elon's capital will be $33B.
 """
 
 ### all your code below ###
-
-
+import math
 # final answer for 10-year
-ten_year_final = None
+#subtract the $11B that was not elons money
+ten_year_final = (33000000000 * ((1 + (3.96 / 100)) ** 10)) 
 
 # final answer for 20-year
-twenty_year_final = None
+#subtract the $11B that was not elons money
+twenty_year_final = (33000000000 * ((1+(4.32 / 100)) ** 20)) 
+
+print(f"Ten year bond return: ${ten_year_final:.2f}")
+print(f"Twenty year bond return: ${twenty_year_final:.2f}")
