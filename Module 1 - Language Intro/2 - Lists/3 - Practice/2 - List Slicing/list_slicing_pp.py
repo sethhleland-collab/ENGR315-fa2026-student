@@ -20,7 +20,8 @@ favorites = example_list[3:]
 print("Favorite colors: " + str(favorites))
 
 # your turn: select the last 4 elements of list
-over_10 = None
+over_10 = example_list[-4:]
+print(f"Over 10 {over_10}")
 
 
 # by moving the integer to behind the colon, you can select everything up
