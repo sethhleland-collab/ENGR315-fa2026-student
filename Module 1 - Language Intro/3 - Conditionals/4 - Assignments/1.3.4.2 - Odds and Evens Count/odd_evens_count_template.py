@@ -29,3 +29,19 @@ num_evens = 0
 num_odds = 0
 
 ### YOUR CODE BEGINS HERE ###
+even_x_list = []
+odd_x_list = []
+
+for x in nums:
+    if x % 2 == 0:
+        even_x_list.append(x)
+    else:
+        odd_x_list.append(x)
+
+# find lenth of even and odd lists
+num_evens = len(even_x_list)
+num_odds = len(odd_x_list)
+
+#Print how many evens and odds
+print(f"There are {num_evens} even numbers.")
+print(f"There are {num_odds} odd numbers.")

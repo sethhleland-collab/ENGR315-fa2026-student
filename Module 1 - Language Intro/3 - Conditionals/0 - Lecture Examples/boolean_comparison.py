@@ -17,3 +17,5 @@ print(str(t)+" > 40 is " + str(t > 40))
 
 # perform less than
 print(str(t)+" < 40 is " + str(t < 40))
+
+print(str(t)+" == 60 is " + str(t == 60))
