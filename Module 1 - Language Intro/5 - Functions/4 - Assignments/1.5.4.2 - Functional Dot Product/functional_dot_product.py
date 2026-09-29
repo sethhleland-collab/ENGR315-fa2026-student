@@ -19,10 +19,12 @@ def dot_product(a,b):
     """
 
     ### YOUR CODE HERE ###
-
+    product = 0
+    for x,y in zip(a,b):
+     product += x*y
 
     ### CHANGE THIS RETURN VALUE. IT IS HERE SO THE CODE DOES NOT ERROR
-    return None
+    return product
 
 """
 Step 1: Generate two "vectors" of equal length but full of random values

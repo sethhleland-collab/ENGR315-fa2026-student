@@ -8,16 +8,25 @@ list_two = [1, -3, -64, 25, 70, 0, 74]
 # Here are the counter variables for the evens and odds.
 # In the For Loop, increase the appropriate one by one
 # when an even or an odd is found!
-one_evens = 0
-one_odds = 0
+even_list = []
+odd_list = []
+
+
 
 # Hint: use if/else statements to set conditions in
 # the For Loop to determine even or odd.
 
 # Fill in this loop:
 for element in list_one:
-    dummy = None
+    if element % 2 == 0:
+     even_list.append(element)
+    else:
+        odd_list.append(element)
+       
 
+    dummy = None
+one_evens = len(even_list)
+one_odds = len(odd_list)
 # These statements can be used to check your work!
 print("The number of odds in list_one is: " + str(one_odds))
 print("The number of evens in list_one is: " + str(one_evens))
