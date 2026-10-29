@@ -26,8 +26,9 @@ def load_tensile_data(_path: str):
     """
 
     # YOUR CODE HERE #
+    _df = pd.read_csv(_path)
 
-    return None
+    return _df
 
 
 def select_material(_df, _material: str):
@@ -39,8 +40,9 @@ def select_material(_df, _material: str):
     """
 
     # YOUR CODE HERE #
+    material_df = _df[_df["Material_Type"] == _material]
 
-    return None
+    return material_df
 
 
 def select_strong(_df, _material: str, _min_yield: float):
@@ -54,8 +56,9 @@ def select_strong(_df, _material: str, _min_yield: float):
     """
 
     # YOUR CODE HERE #
+    strong_df = _df[(_df["Material_Type"] == _material) & (_df["Yield_Strength"] > _min_yield)] 
 
-    return None
+    return strong_df
 
 
 def get_values(_df, _material: str, _column: str):
@@ -68,8 +71,10 @@ def get_values(_df, _material: str, _column: str):
     """
 
     # YOUR CODE HERE #
+    material_df = _df[_df["Material_Type"] == _material]
+    array = material_df[_column].to_numpy()
 
-    return None
+    return array
 
 
 def material_statistics(_df, _material: str, _column: str):
@@ -83,8 +88,12 @@ def material_statistics(_df, _material: str, _column: str):
     """
 
     # YOUR CODE HERE #
+    material_df = _df[_df["Material_Type"] == _material]
+    mean = material_df[_column].mean()
+    stdev = material_df[_column].std()
+    results = (mean, stdev)
 
-    return None
+    return results
 
 
 def summary_table(_df, _columns: list):
@@ -99,8 +108,16 @@ def summary_table(_df, _columns: list):
     """
 
     # YOUR CODE HERE #
+    summary = {}
 
-    return None
+    for material in _df["Material_Type"].unique():
+        summary[material] = {}
+        for column in _columns:
+            summary[material][column] = material_statistics(_df, material, column)
+
+    return summary
+
+
 
 
 if __name__ == '__main__':
